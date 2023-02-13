@@ -40,7 +40,7 @@ st.write("## Age-specific cancer mortality rates")
 
 ### P2.1 ###
 # replace with st.slider
-year = st.slider("Year",min(df['Year']),max(df['Year']))
+year = st.slider("Year",min(df['Year']),max(df['Year']),2012)
 subset = df[df["Year"] == year]
 ### P2.1 ###
 
