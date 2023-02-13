@@ -72,7 +72,7 @@ subset = subset[subset["Country"].isin(countries)]
 
 ### P2.4 ###
 # replace with st.selectbox
-cancer = "Malignant neoplasm of stomach"
+cancer = st.selectbox("Cancer",df['Cancer'].unique())
 subset = subset[subset["Cancer"] == cancer]
 ### P2.4 ###
 
