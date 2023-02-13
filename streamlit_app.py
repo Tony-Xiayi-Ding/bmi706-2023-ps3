@@ -31,12 +31,12 @@ def load_data():
 
 
 # Uncomment the next line when finished
-df = load_data()
+df=load_data()
 
 ### P1.2 ###
 
 
-st.write("## Age-333specific cancer mortality rates")
+st.write("## Age-specific cancer mortality rates")
 
 ### P2.1 ###
 # replace with st.slider
