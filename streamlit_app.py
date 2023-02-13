@@ -40,6 +40,7 @@ st.write("## Age-specific cancer mortality rates")
 
 ### P2.1 ###
 # replace with st.slider
+# default to 2012 as shown in DEMO
 year = st.slider("Year",min(df['Year']),max(df['Year']),2012)
 subset = df[df["Year"] == year]
 ### P2.1 ###
@@ -54,8 +55,9 @@ subset = subset[subset["Sex"] == sex]
 
 ### P2.3 ###
 # replace with st.multiselect
+
 # (hint: can use current hard-coded values below as as `default` for selector)
-countries = [
+countries = st.multiselect("Countries",df['Country'].unique(),[
     "Austria",
     "Germany",
     "Iceland",
@@ -63,7 +65,7 @@ countries = [
     "Sweden",
     "Thailand",
     "Turkey",
-]
+])
 subset = subset[subset["Country"].isin(countries)]
 ### P2.3 ###
 
